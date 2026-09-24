@@ -1,0 +1,6 @@
+# Local environment values (frontend VITE_* values are still browser-readable).
+.env
+.env.*
+!.env.example
+node_modules/
+web_app/frontend/dist/

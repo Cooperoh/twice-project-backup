@@ -1,0 +1,82 @@
+[server]
+host = "127.0.0.1"
+port = 8765
+open_browser = true
+push_interval_ms = 100
+
+[udp]
+bind_host = "0.0.0.0"
+bind_port = 56999
+# 每架无人机独立配置 ID、IP 和控制监听端口；ID 不依赖下面的排列顺序。
+# 暂时全部使用 10.144.1.100 和原对应端口；有真实 IP 后逐行修改 host。
+# 只发送给地面站列表中的无人机，断联后仍发送；可仅保留需要使用的 ID。
+targets = [
+  { id = 1, host = "10.144.1.100", port = 57001 },
+  { id = 2, host = "10.144.1.100", port = 57002 },
+  { id = 3, host = "10.144.1.100", port = 57003 },
+  { id = 4, host = "10.144.1.100", port = 57004 },
+  { id = 5, host = "10.144.1.100", port = 57005 },
+  { id = 6, host = "10.144.1.100", port = 57006 },
+  { id = 7, host = "10.144.1.100", port = 57007 },
+  { id = 8, host = "10.144.1.100", port = 57008 },
+  { id = 9, host = "10.144.1.100", port = 57009 },
+  { id = 10, host = "10.144.1.100", port = 57010 },
+  { id = 11, host = "10.144.1.100", port = 57011 },
+  { id = 12, host = "10.144.1.100", port = 57012 },
+  { id = 13, host = "10.144.1.100", port = 57013 },
+  { id = 14, host = "10.144.1.100", port = 57014 },
+  { id = 15, host = "10.144.1.100", port = 57015 },
+  { id = 16, host = "10.144.1.100", port = 57016 },
+  { id = 17, host = "10.144.1.100", port = 57017 },
+  { id = 18, host = "10.144.1.100", port = 57018 },
+  { id = 19, host = "10.144.1.100", port = 57019 },
+  { id = 20, host = "10.144.1.100", port = 57020 },
+  { id = 21, host = "10.144.1.100", port = 57021 },
+  { id = 22, host = "10.144.1.100", port = 57022 },
+  { id = 23, host = "10.144.1.100", port = 57023 },
+  { id = 24, host = "10.144.1.100", port = 57024 },
+]
+max_packet_size = 65536
+retry_seconds = 2.0
+print_received = false
+
+[map]
+home_lat = 38.3094
+home_lon = 117.6800
+zoom = 14
+tile_url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+attribution = "&copy; OpenStreetMap contributors"
+
+[telemetry]
+normal_seconds = 3.0
+weak_seconds = 8.0
+poor_seconds = 15.0
+disconnected_seconds = 20.0
+
+[formation]
+default_type = 1
+default_spacing = 2000.0
+
+[limits]
+track_points_per_drone = 10000
+log_entries = 2000
+websocket_queue = 8
+send_queue = 64
+
+[[obstacles]]
+id = "obs_0"
+lat = 38.31658652
+lon = 117.68000000
+radius_m = 100.0
+
+[[obstacles]]
+id = "obs_1"
+lat = 38.32017978
+lon = 117.67542070
+radius_m = 300.0
+
+[[obstacles]]
+id = "obs_2"
+lat = 38.32017978
+lon = 117.68457930
+radius_m = 200.0

@@ -1,0 +1,24 @@
+blue-marble-relief.jpg: NASA Blue Marble Next Generation, December 2004.
+Land surface, topography and bathymetry. Original 5400 x 2700 texture, archival data.
+https://visibleearth.nasa.gov/images/73909/december-blue-marble-next-generation-w-topography-and-bathymetry
+https://eoimages.gsfc.nasa.gov/images/imagerecords/73000/73909/world.topo.bathy.200412.3x5400x2700.jpg
+NASA imagery usage guidelines: https://www.nasa.gov/nasa-brand-center/images-and-media/
+Relief is depicted in the image; it does not add geometric terrain or live snow data.
+
+places.json: Derived from Natural Earth vector data, retrieved 2026-09-11.
+177 admin-0 label anchors and all 7342 populated places, SCALERANK 0 through 10.
+Chinese names where supplied, English fallback. Coordinates rounded to 4 decimal places.
+Selected long-form admin names use short geographic display names; equal-rank labels
+are ordered by source population estimate to prioritize major countries and cities.
+https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson
+https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_populated_places.geojson
+License: Public domain. https://www.naturalearthdata.com/about/terms-of-use/
+
+boundaries.json: Natural Earth 1:50m admin-0 land boundaries and 1:10m admin-1 lines.
+https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_50m_admin_0_boundary_lines_land.geojson
+https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_1_states_provinces_lines.geojson
+Retrieved 2026-09-11. Coordinates rounded to 4 decimals, simplified with a 0.02-degree
+Douglas-Peucker tolerance; null geometry and duplicates removed, connected fragments joined.
+329 land-border paths, 20 disputed paths (dashed), 9071 province/state boundary paths.
+Original FEATURECLA determines the disputed style. These are generalized map lines,
+not survey boundaries. Local-scale display fades out to avoid misleading precision.

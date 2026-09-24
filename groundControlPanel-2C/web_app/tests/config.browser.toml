@@ -1,0 +1,82 @@
+[server]
+host = "127.0.0.1"
+port = 8766
+open_browser = false
+push_interval_ms = 100
+
+[udp]
+bind_host = "127.0.0.1"
+bind_port = 56998
+# 每架无人机独立配置 ID、IP 和控制监听端口；ID 不依赖下面的排列顺序。
+# 当前为本机仿真地址，实飞前逐行改成对应无人机的实际 IP 和端口。
+# 只发送给地面站列表中的无人机，断联后仍发送；可仅保留需要使用的 ID。
+targets = [
+  { id = 1, host = "127.0.0.1", port = 57901 },
+  { id = 2, host = "127.0.0.1", port = 57902 },
+  { id = 3, host = "127.0.0.1", port = 57903 },
+  { id = 4, host = "127.0.0.1", port = 57904 },
+  { id = 5, host = "127.0.0.1", port = 57905 },
+  { id = 6, host = "127.0.0.1", port = 57906 },
+  { id = 7, host = "127.0.0.1", port = 57907 },
+  { id = 8, host = "127.0.0.1", port = 57908 },
+  { id = 9, host = "127.0.0.1", port = 57909 },
+  { id = 10, host = "127.0.0.1", port = 57910 },
+  { id = 11, host = "127.0.0.1", port = 57911 },
+  { id = 12, host = "127.0.0.1", port = 57912 },
+  { id = 13, host = "127.0.0.1", port = 57913 },
+  { id = 14, host = "127.0.0.1", port = 57914 },
+  { id = 15, host = "127.0.0.1", port = 57915 },
+  { id = 16, host = "127.0.0.1", port = 57916 },
+  { id = 17, host = "127.0.0.1", port = 57917 },
+  { id = 18, host = "127.0.0.1", port = 57918 },
+  { id = 19, host = "127.0.0.1", port = 57919 },
+  { id = 20, host = "127.0.0.1", port = 57920 },
+  { id = 21, host = "127.0.0.1", port = 57921 },
+  { id = 22, host = "127.0.0.1", port = 57922 },
+  { id = 23, host = "127.0.0.1", port = 57923 },
+  { id = 24, host = "127.0.0.1", port = 57924 },
+]
+max_packet_size = 65536
+retry_seconds = 0.2
+print_received = false
+
+[map]
+home_lat = 38.3094
+home_lon = 117.6800
+zoom = 14
+tile_url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+attribution = "&copy; OpenStreetMap contributors"
+
+[telemetry]
+normal_seconds = 3.0
+weak_seconds = 8.0
+poor_seconds = 15.0
+disconnected_seconds = 20.0
+
+[formation]
+default_type = 1
+default_spacing = 2000.0
+
+[limits]
+track_points_per_drone = 10000
+log_entries = 2000
+websocket_queue = 8
+send_queue = 64
+
+[[obstacles]]
+id = "obs_0"
+lat = 38.31658652
+lon = 117.68000000
+radius_m = 100.0
+
+[[obstacles]]
+id = "obs_1"
+lat = 38.32017978
+lon = 117.67542070
+radius_m = 300.0
+
+[[obstacles]]
+id = "obs_2"
+lat = 38.32017978
+lon = 117.68457930
+radius_m = 200.0

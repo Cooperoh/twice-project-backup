@@ -1,0 +1,2 @@
+rtsp://admin:1A2b3c4d5e@192.168.1.4:8554/live
+rtsp://admin:1A2b3c4d5e@192.168.1.4:8555/live

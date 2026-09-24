@@ -1,0 +1,8 @@
+clouds.jpg: NASA Visible Earth, Blue Marble cloud composite (archival imagery).
+Image: https://eoimages.gsfc.nasa.gov/images/imagerecords/57000/57747/cloud_combined_2048.jpg
+Source collection: https://visibleearth.nasa.gov/collection/1484/blue-marble
+NASA imagery usage guidelines: https://www.nasa.gov/nasa-brand-center/images-and-media/
+
+The displayed cloud rotation is decorative, not live weather.
+satellite.svg and the procedural star background were created for this project.
+Satellite positions and orbital periods are illustrative, not real tracking data.
